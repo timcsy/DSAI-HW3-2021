@@ -4,6 +4,7 @@
 - Python 3
 - PyTorch
 - Numpy
+- Pandas
 - OpenAI Gym
 - stable_baselines3
 

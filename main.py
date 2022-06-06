@@ -1,3 +1,4 @@
+import pandas as pd
 
 # You should not modify this part.
 def config():
@@ -13,8 +14,6 @@ def config():
 
 
 def output(path, data):
-    import pandas as pd
-
     df = pd.DataFrame(data, columns=["time", "action", "target_price", "target_volume"])
     df.to_csv(path, index=False)
 
@@ -24,6 +23,6 @@ def output(path, data):
 if __name__ == "__main__":
     args = config()
 
-    data = [["2018-01-01 00:00:00", "buy", 2.5, 3],
-            ["2018-01-01 01:00:00", "sell", 3, 5]]
+    data = [["2018-01-01 00:00:00", "buy", 2.4, 3.2],
+            ["2018-01-01 01:00:00", "sell", 2.8, 6]]
     output(args.output, data)
