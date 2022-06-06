@@ -69,7 +69,7 @@ DQN（Deep Q-Learning）：用 NN 來學 Q Function
 - 又稱作 Actor
 
 ### Policy Gradient
-- 定義：軌跡 Trajectory $\tau=\left{s_1,a_1,s_2,a_2,...,s_T,a_T\right}$
+- 定義：軌跡 Trajectory $\tau= \{ s_1,a_1,s_2,a_2,...,s_T,a_T \}$
 - 假設：對於環境的機率分佈 $P(s'|s,a)$，一個 state 只跟前面的 action 和前一個 state 有關
     - 不可以調（跟 policy 無關，微分不影響）
 - Policy 是一個機率分佈 $\pi_\theta(a \vert s)$，可以用 network 學出來
