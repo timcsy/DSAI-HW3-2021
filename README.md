@@ -82,7 +82,7 @@ DQN（Deep Q-Learning）：用 NN 來學 Q Function
 - 目標：最大化以 Advantage 作權重的 log likelihood
     - $\nabla J(\theta) = E_{\tau \sim p_\theta(\tau)}\left[A(\tau) \nabla \log p_\theta(\tau)\right]$，$p_\theta(\tau)$ 未知 $\Rightarrow$ sample
     - $\displaystyle \approx \frac{1}{N} \sum^N_{n=1} A(\tau^n) \nabla \log p_\theta(\tau^n)$
-    - $\displaystyle =\frac{1}{N} \sum^N_{n=1} \sum^{T_n}_{t=1} A(\tau^n) \nabla \log \pi_\theta(a^n_t | s^n_t)$
+    - $\displaystyle =\frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n} A(\tau^n) \nabla \log \pi_\theta(a^n_t | s^n_t)$
     - $l(\theta) = -J(\theta) = E_{\tau \sim Environment\ and\ Policy}[-A(\tau) \log p_\theta(\tau)]$
     - 可想成是權重為 Advantage 的 Weighted Cross Entropy
     - 這個 Loss Function $J(\theta)$ 的梯度就是 Policy Gradient
