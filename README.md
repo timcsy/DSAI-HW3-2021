@@ -76,7 +76,7 @@ DQN（Deep Q-Learning）：用 NN 來學 Q Function
     - 可以調
 - Log Likelihood
     - $p_\theta(\tau)=P(s_1)\pi_\theta(a_1|s_1)P(s_2|s_1,a_1)\pi_\theta(a_2|s_2)P(s_3|s_2,a_2)...$
-      $\displaystyle = P(s_1)\prod_{t=1}^T \pi_\theta(a_t|s_t)P(s_{t+1}|s_t,a_t)$
+    - $\displaystyle = P(s_1)\prod_{t=1}^T \pi_\theta(a_t|s_t)P(s_{t+1}|s_t,a_t)$
     - $\displaystyle \log p_\theta(\tau)= \sum_{t=1}^T \log \pi_\theta(a_t|s_t) + \log P(s_1) + \sum_{t=1}^T \log P(s_{t+1}|s_t,a_t)$
         - 後面跟 $\theta$ 無關，對 $\theta$ 微分等於 0
 - 目標：最大化以 Advantage 作權重的 log likelihood
